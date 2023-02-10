@@ -540,27 +540,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\preambulotese}{
-	Tese apresentada ao Curso de \imprimirdoutorado\ do \imprimirprogramadoutorado\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do título de doutor em \imprimirdoutorem. Área de Concentração: \imprimirareadeconcentracaodoutorado \\
+	Tese apresentada ao Curso de \imprimirdoutorado\ do \imprimirprogramadoutorado\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do título de doutor em \imprimirdoutorem. Área de Concentração: \imprimirareadeconcentracaodoutorado 
 }
 
 \newcommand{\preambulodissertacao}{
-	Dissertação apresentada ao Curso de \imprimirmestrado\ do \imprimirprogramamestrado\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do título de mestre em \imprimirmestreem. Área de Concentração: \imprimirareadeconcentracaomestrado \\
+	Dissertação apresentada ao Curso de \imprimirmestrado\ do \imprimirprogramamestrado\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do título de mestre em \imprimirmestreem. Área de Concentração: \imprimirareadeconcentracaomestrado 
 }
 
 \newcommand{\preambulotccgraduacao}{
-	Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em \imprimirgraduacaoem\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do grau de \imprimirhabilitacao\ em \imprimirgraduacaoem. \\
+	Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em \imprimirgraduacaoem\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do grau de \imprimirhabilitacao\ em \imprimirgraduacaoem. 
 }
 
 \newcommand{\preambulotccespecializacao}{
-	Trabalho de Conclusão de Curso apresentado ao Curso de Especialização em \imprimirespecializacaoem\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção da certificação de especialista em \imprimirespecializacaoem.
-%Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em \imprimirgraduacaoem\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do grau de \imprimirhabilitacao\ em \imprimirgraduacaoem. \\
+	Trabalho de Conclusão de Curso apresentado ao Curso de Especialização em \imprimirespecializacaoem\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção da certificação de especialista em \imprimirespecializacaoem. 
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \preambulo{
-	\ifthenelse{\boolean{uecetex2@ehqualificacao}}{ % Mudei o texto para o projeto da cadeira
+	\ifthenelse{\boolean{uecetex2@ehqualificacao}}{ 
+ % Mudei o texto para o projeto da cadeira
 		Proposta de qualificação apresentada ao Curso de \imprimirmestrado\  da \imprimiries\ (\imprimiriessigla) como requisito parcial para a defesa de dissertação.
 	}{ %
 		\ifthenelse{\boolean{uecetex2@ehdissertacao}}{ %
@@ -593,7 +593,7 @@
 		% Todos os elementos da capa devem esta em negrito
 		\bfseries
 
-        \includegraphics[scale=0.12]{lib/logo-uece} \\
+        \includegraphics[scale=0.12]{lib/logo-uece.png} \\
         \vspace{0.1cm}
 		\MakeUppercase{\imprimiries} \\
 		\MakeUppercase{\imprimircentro} \\
@@ -709,18 +709,18 @@
 	\hspace*{-2cm}
 	%Adiciona o espaço da margem
 	\hspace*{8cm}	
-	\begin{minipage}{8cm}
+	\begin{minipage}{7.5cm}
 		\begin{SingleSpace}
 			\imprimirpreambulo	
 			\newline
-			\artigoorientador: \ignorespaces\imprimirorientador \\
+			\artigoorientador: \ignorespaces\imprimirorientador 
 			\abntex@ifnotempty{\imprimircoorientador}{
 				\newline
 				\artigocoorientador: \ignorespaces\imprimircoorientador				
 			}
 		\end{SingleSpace}		
 	\end{minipage}
-	
+ 
 	\vfill
 	\centering
 	\normalsize\MakeUppercase\imprimirlocal \par
@@ -764,7 +764,7 @@
 	\hspace*{8cm}	
 	\begin{minipage}{7.5cm}
 		\begin{SingleSpace}
-			\imprimirpreambulo \\			
+			\imprimirpreambulo
 		\end{SingleSpace}		
 	\end{minipage}
 
@@ -783,27 +783,27 @@
 	% Membro Um da banca é sempre o Orientador
 	% Membro Dois da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimircoorientador}{
-		\hspace*{-2.5cm}
-		\assinatura*{\imprimirorientador\  \artigoorientadorcomparenteses \\ \imprimirorientadories}		
+		\hspace*{-2.95cm}
+		\assinatura*{\imprimirorientador\  \artigoorientadorcomparenteses \\ \imprimirorientadories}  
 		\hspace*{0.7cm} 
 		\assinatura*{\imprimircoorientador\ \artigocoorientadorcomparenteses \\ \imprimircoorientadories}
 		
-		\hspace*{-2.6cm}
+		\hspace*{-3cm}
 		% Membro Três da banca pode ser o coorientador ou outro membro
 		\ifnotempty{\imprimirmembrodabancadois}{
 			\assinatura*{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
 		}{}
-		\hspace*{0.7cm} 		
+		\hspace*{0.5cm} 		
 		% Membro Três da banca pode ser o coorientador ou outro membro
 		\ifnotempty{\imprimirmembrodabancatres}{
 			\assinatura*{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
 		}{}
-		\hspace*{-0.6cm} 
+		\hspace*{-1.0cm} 
 		% Membro Quatro da banca pode ser o coorientador ou outro membro
 		\ifnotempty{\imprimirmembrodabancaquatro}{
 			\assinatura*{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
 		}{}	
-		\hspace*{0.7cm} 
+		\hspace*{0.5cm} 
 		\ifnotempty{\imprimirmembrodabancacinco}{
 			\assinatura*{\imprimirmembrodabancacinco \\ \imprimirmembrodabancacincoies}
 		}{}
@@ -836,7 +836,7 @@
 		\hspace*{0.7cm} 
 		% Membro Quatro da banca pode ser o coorientador ou outro membro
 		\ifnotempty{\imprimirmembrodabancaseis}{
-			\assinatura*{\imprimirmembrodabancaseis \\ \imprimirmembrodabancaseisies}
+			\assinatura*{\imprimirmembrodabancaseis \\  \imprimirmembrodabancaseisies}
 		}{}
 	}
 	\pagebreak	
@@ -858,9 +858,9 @@
 	\hspace*{-2cm}
 	%Adiciona o espaço da margem
 	\hspace*{8cm}	
-	\begin{minipage}{8cm}
+	\begin{minipage}{7.5cm}
 		\begin{SingleSpace}
-			\imprimirpreambulo \\			
+		  \imprimirpreambulo            
 		\end{SingleSpace}		
 	\end{minipage}
 
@@ -876,11 +876,11 @@
 		\vspace{\onelineskip}
 
 	% Membro Um da banca é sempre o Orientador
-	\assinatura{\imprimirorientador\  \artigoorientadorcomparenteses \\ \imprimirorientadories}
+	\assinatura{\imprimirorientador \artigoorientadorcomparenteses \\ \imprimirorientadories}
 	
 	% Membro Dois da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimircoorientador}{
-		\assinatura{\imprimircoorientador\ \artigocoorientadorcomparenteses \\ \imprimircoorientadories}
+		\assinatura{\imprimircoorientador \artigocoorientadorcomparenteses \\ \imprimircoorientadories}
 	}
 	
 	% Membro Três da banca pode ser o coorientador ou outro membro
@@ -917,9 +917,9 @@
 	\hspace*{-2cm}
 	%Adiciona o espaço da margem
 	\hspace*{8cm}	
-	\begin{minipage}{8cm}
+	\begin{minipage}{7.5cm}
 		\begin{SingleSpace}
-			\imprimirpreambulo \\			
+               \imprimirpreambulo 
 		\end{SingleSpace}		
 	\end{minipage}
 
@@ -935,11 +935,11 @@
 		\vspace{\onelineskip}
 
 	% Membro Um da banca é sempre o Orientador
-	\assinatura{\imprimirorientador\  \artigoorientadorcomparenteses \\ \imprimirorientadorcentro \\  \imprimirorientadories}
+	\assinatura{\imprimirorientador \artigoorientadorcomparenteses \\ \imprimirorientadorcentro \\  \imprimirorientadories}
 	
 	% Membro Dois da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimircoorientador}{
-		\assinatura{\imprimircoorientador\ \artigocoorientadorcomparenteses \\ \imprimircoorientadorcentro\\ \imprimircoorientadories}
+		\assinatura{\imprimircoorientador \artigocoorientadorcomparenteses \\ \imprimircoorientadorcentro\\ \imprimircoorientadories}
 	}
 	
 	% Membro Três da banca pode ser o coorientador ou outro membro
@@ -1035,7 +1035,7 @@
 		\hspace*{-2cm}
 		%Adiciona o espaço da margem
 		\hspace*{8cm}	
-		\begin{minipage}{8cm}
+		\begin{minipage}{7.5cm}
 			\input{#1}
 		\end{minipage}
 		\pagebreak
@@ -1081,7 +1081,7 @@
 		\hspace*{-2cm}
 		%Adiciona o espaço da margem
 		\hspace*{8cm}	
-		\begin{minipage}{8cm}
+		\begin{minipage}{7.5cm}
 			\input{#1}
 			\raggedleft{(\imprimirautordaepigrafe) \par}
 		\end{minipage}		
@@ -1331,7 +1331,7 @@
 }
 
 \newcommand{\imprimirglossario}{ %
-	\glossarystyle{glossario-uece} %	
+	\setglossarystyle{glossario-uece} %	
 	\printglossary[title=\glossarioname,toctitle=\glossarioname] %
 	\addcontentsline{toc}{chapter}{\glossarioname}
 }
@@ -1391,7 +1391,8 @@
 }
 
 \newcommand{\imprimirapendices}{ %
-	\imprimirpaginaapendices
+        % não precisa mais daquela página com o nome Apêndice sozinho.
+	%\imprimirpaginaapendices
 	\apendices %
 	% Retira o negrito da palavra "Apendice"
 	\PRIVATEapendiceconfig{\normalfont\apendicename}{\normalfont\apendicesname} %

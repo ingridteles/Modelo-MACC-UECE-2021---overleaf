@@ -37,7 +37,7 @@
 % Define se o trabalho eh uma qualificacao
 % Coloque 'nao' para versao final do trabalho
 
-\ehqualificacao{sim}
+\ehqualificacao{nao}
 
 % Remove as bordas vermelhas e verdes do PDF gerado
 % Coloque 'sim' pare remover
@@ -60,14 +60,14 @@
 %%        Informação para TCC de Graduacao         %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\graduacaoem{Ciência da Computação}
-%\habilitacao{bacharel} % Pode colocar tambem 'licenciada'
+\graduacaoem{Ciência da Computação}
+\habilitacao{bacharel} % Pode colocar tambem 'licenciada'
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%     Informação para TCC de Especializacao       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\especializacaoem{Alfabetização de Crianças}
+\especializacaoem{Engenharia de Software com Ênfase em Padrões de Software}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%         Informação para Dissertacao             %%
@@ -114,7 +114,7 @@
 
 % Deixe o nome do coorientador em branco para remover do documento
 
-\coorientador{}
+\coorientador{Nome do seu Co-orientador}
 \coorientadories{Universidade Co-orientador - SIGLA}
 \coorientadorcentro{Centro do Co-orientador - SIGLA}
 \coorientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
@@ -153,21 +153,21 @@
 	% Elementos pré-textuais
 	\imprimircapa
 	\imprimirfolhaderosto{}
-	%\imprimirfichacatalografica{elementos-pre-textuais/ficha-catalografica}
-	%\imprimirerrata{elementos-pre-textuais/errata}
+	\imprimirfichacatalografica{elementos-pre-textuais/ficha-catalografica}
+	\imprimirerrata{elementos-pre-textuais/errata}
 	\imprimirfolhadeaprovacao
-	%\imprimirdedicatoria{elementos-pre-textuais/dedicatoria}
-	%\imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
-	%\imprimirepigrafe{elementos-pre-textuais/epigrafe}
+	\imprimirdedicatoria{elementos-pre-textuais/dedicatoria}
+	\imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
+	\imprimirepigrafe{elementos-pre-textuais/epigrafe}
 	\imprimirresumo{elementos-pre-textuais/resumo}
 	\imprimirabstract{elementos-pre-textuais/abstract}
-	%\imprimirlistadeilustracoes
-	%\imprimirlistadetabelas
-	%\imprimirlistadequadros
-	%\imprimirlistadealgoritmos
-	%\imprimirlistadecodigosfonte
-	%\imprimirlistadeabreviaturasesiglas	
-	%\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
+	\imprimirlistadeilustracoes
+	\imprimirlistadetabelas
+	\imprimirlistadequadros
+	\imprimirlistadealgoritmos
+	\imprimirlistadecodigosfonte
+	\imprimirlistadeabreviaturasesiglas	
+	\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
 	\imprimirsumario
 	
 	%Elementos textuais
@@ -176,22 +176,22 @@
 	\input{elementos-textuais/2-fundamentacao-teorica}
 	\input{elementos-textuais/3-trabalhos-relacionados}
 	\input{elementos-textuais/4-proposta}
-	%\input{elementos-textuais/5-avaliacao}
+	\input{elementos-textuais/5-avaliacao}
 	\input{elementos-textuais/6-calendario-de-atividades}
-	%\input{elementos-textuais/7-conclusao}
+	\input{elementos-textuais/7-conclusao}
 	
 	%Elementos pós-textuais	
 	\bibliography{elementos-pos-textuais/referencias}
-	%\input{elementos-pos-textuais/referencias-manualmente}
+	\input{elementos-pos-textuais/referencias-manualmente}
 	
-	%\imprimirglossario	
+	\imprimirglossario	
 	\imprimirapendices
 		% Adicione aqui os apendices do seu trabalho
 		\input{elementos-pos-textuais/apendices/apendice-a}
-	%\imprimiranexos
+	\imprimiranexos
 		% Adicione aqui os anexos do seu trabalho
-		%\input{elementos-pos-textuais/anexos/exemplo-de-anexo}		
-		%\input{elementos-pos-textuais/anexos/dinamica-das-classes-sociais}
+		\input{elementos-pos-textuais/anexos/exemplo-de-anexo}		
+		\input{elementos-pos-textuais/anexos/dinamica-das-classes-sociais}
 	\imprimirindice
 
 \end{document}

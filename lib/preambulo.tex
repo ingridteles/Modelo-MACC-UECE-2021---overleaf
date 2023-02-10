@@ -54,6 +54,10 @@
 %\usepackage{titlesec}                               % Permite alterar os títulos do documento
 \usepackage{tocloft}                                % Permite alterar a formatação do Sumário
 \usepackage{etoolbox}                               % Usado para alterar a fonte da Section no Sumário
+\usepackage{silence}
+\WarningFilter{glossaries}{Overriding \printglossary}
+\WarningFilter{glossaries}{Overriding `theglossary'}
+\WarningFilter{glossaries}{No \printglossary or \printglossaries found.}
 \usepackage[nogroupskip,nonumberlist,acronym]{glossaries}                % Permite fazer o glossario
 \usepackage{caption}                                % Altera o comportamento da tag caption
 \usepackage[alf, abnt-emphasize=bf, bibjustif, recuo=0cm, abnt-etal-cite=3, abnt-etal-list=0,abnt-etal-text=it]{abntex2cite}  % Citações padrão ABNT
@@ -74,6 +78,15 @@
 \usepackage{lib/uecetex2}		                    % Biblioteca com as normas da UECE para trabalhos academicos
 \usepackage{pdfpages}                               % Incluir pdf no documento
 \usepackage{amsmath}                                % Usar equacoes matematicas
+\usepackage{xurl}
+\pdfstringdefDisableCommands{%
+  \def\\{}%
+  \def\texttt#1{<#1>}%
+  \def\lowercase#1{<#1>}%
+  \def\textit#1{<#1>}%
+  \def\textbf#1{<#1>}%
+  \def\uppercase#1{<#1>}%  
+}
 
 % Organiza e gera a lista de abreviaturas, simbolos e glossario
 \makeglossaries
