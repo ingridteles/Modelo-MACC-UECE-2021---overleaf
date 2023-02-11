@@ -86,6 +86,7 @@
 
 % Estilo da section 1.1 Mudei pra fonte não ser mais em caixa alta e com negrito 
 \renewcommand{\ABNTEXsectionfont}{\bfseries}%{\normalfont}
+\setboolean{ABNTEXuppersection}{false}
 \renewcommand{\ABNTEXsectionfontsize}{\normalsize}
 
 % Estilo da subsection 1.1.1 Mudei pra fonte normal, sem ser negrito
@@ -804,36 +805,36 @@
 			\assinatura*{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
 		}{}	
 		\hspace*{0.5cm} 
+            % Membro Cinco da banca pode ser o coorientador ou outro membro
 		\ifnotempty{\imprimirmembrodabancacinco}{
 			\assinatura*{\imprimirmembrodabancacinco \\ \imprimirmembrodabancacincoies}
 		}{}
 	}{
 		% Espaço entre uma assintura e outra
 		\setlength{\ABNTEXsignskip}{2pt}
-		\hspace*{-2.5cm}
+		\hspace*{-2.95cm}
 		\assinatura*{\imprimirorientador\  \artigoorientadorcomparenteses \\ \imprimirorientadories}		
-		\hspace*{0.7cm} 
-		% Membro Três da banca pode ser o coorientador ou outro membro
+		\hspace*{0.5cm} 
+		% Membro Dois da banca pode ser o coorientador ou outro membro
 		\ifnotempty{\imprimirmembrodabancadois}{
 			\assinatura*{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
 		}{}
 		
-		\hspace*{-2.6cm}		
+		\hspace*{-3cm}		
 		% Membro Três da banca pode ser o coorientador ou outro membro
 		\ifnotempty{\imprimirmembrodabancatres}{
 			\assinatura*{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
 		}{}		
-		\hspace*{0.7cm} 
+		\hspace*{0.5cm} 
 		% Membro Quatro da banca pode ser o coorientador ou outro membro
 		\ifnotempty{\imprimirmembrodabancaquatro}{
 			\assinatura*{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
 		}{}
-		
-		\hspace*{-2.65cm}
+		\hspace*{-1.0cm}
 		\ifnotempty{\imprimirmembrodabancacinco}{
 			\assinatura*{\imprimirmembrodabancacinco \\ \imprimirmembrodabancacincoies}
 		}{}
-		\hspace*{0.7cm} 
+		\hspace*{0.5cm} 
 		% Membro Quatro da banca pode ser o coorientador ou outro membro
 		\ifnotempty{\imprimirmembrodabancaseis}{
 			\assinatura*{\imprimirmembrodabancaseis \\  \imprimirmembrodabancaseisies}
@@ -1215,7 +1216,8 @@
 \endgroup
 
 \renewcommand\cftlstlistingpresnum{\lstlistingname~}
-\settowidth\mylen{\cftlstlistingpresnum\cftlstlistingaftersnum}
+%\settowidth\mylen{\cftlstlistingpresnum\cftlstlistingaftersnum}
+\settowidth\mylen{\cftlstlistingpresnum\hspace{1cm}\cftlstlistingaftersnum}
 \addtolength\cftlstlistingnumwidth{\mylen} %
 \renewcommand\cftlstlistingaftersnum{~\hfill\textendash\hfill}
 
@@ -1331,7 +1333,7 @@
 }
 
 \newcommand{\imprimirglossario}{ %
-	\setglossarystyle{glossario-uece} %	
+	\glossarystyle{glossario-uece} %	
 	\printglossary[title=\glossarioname,toctitle=\glossarioname] %
 	\addcontentsline{toc}{chapter}{\glossarioname}
 }
@@ -1508,7 +1510,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\renewcommand\cftchapterfont{\normalsize}
-\renewcommand\cftsectionfont{\normalsize\normalfont\bfseries} % Acrescentei \bfseries pra deixar a fonte em negrito
+\renewcommand\cftsectionfont{\normalsize\bfseries} % Acrescentei \bfseries pra deixar a fonte em negrito
 \renewcommand\cftsubsectionfont{\normalsize\normalfont} % Acrescentei \normalfont para deixar de ser negrito
 \renewcommand\cftsubsubsectionfont{\normalsize\itshape\bfseries} % Retirei \normalfont e acrescentei \itshape e \bfseries pra tornar ele italico e negrito
 % Altera a fonte da seção quinária
@@ -1524,7 +1526,7 @@
 % Altera a fonte da seção quinária
 \renewcommand\cftparagraphpagefont{\normalfont}
 
-% Secao Secundaria (Section): Caixa alta, Não Negrito, tamanho 12
+% Secao Secundaria (Section): Caixa alta e baixa com negrito, tamanho 12
 \makeatletter
 \let\oldcontentsline\contentsline
 \def\contentsline#1#2{%
@@ -1534,7 +1536,7 @@
 	\expandafter\@secondoftwo %
 	\fi %
 	{%
-		\oldcontentsline{#1}{\MakeTextUppercase{#2}}%
+		\oldcontentsline{#1}{#2}%
 	}{%
 	\oldcontentsline{#1}{#2}%
 }%
