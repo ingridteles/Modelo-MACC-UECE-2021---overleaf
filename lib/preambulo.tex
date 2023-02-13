@@ -68,7 +68,7 @@
 %\usepackage{lmodern}                               % Usa a fonte Latin Modern
 %\usepackage{subfig}                                % Posicionamento de figuras
 %\usepackage{scalefnt}                              % Permite redimensionar tamanho da fonte
-%\usepackage{color, colortbl}                       % Comandos de cores
+\usepackage{color, colortbl}                       % Comandos de cores
 %\usepackage{lscape}                                % Permite páginas em modo "paisagem"
 %\usepackage{ae, aecompl}                           % Fontes de alta qualidade
 %\usepackage{picinpar}                              % Dispor imagens em parágrafos
@@ -79,14 +79,31 @@
 \usepackage{lib/uecetex2}		                    % Biblioteca com as normas da UECE para trabalhos academicos
 \usepackage{pdfpages}                               % Incluir pdf no documento
 \usepackage{amsmath}                                % Usar equacoes matematicas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}                % Usa a fonte Arial
+\newcommand\courierfamily{\fontfamily{pcr} \selectfont}  % Courier font
+\DeclareTextFontCommand{\textcourier}{\courierfamily}
+\usepackage{comment}
 \usepackage{xurl}
+\usepackage{xcolor}
+\usepackage{tikz-qtree}
+\usepackage{courier}
+% Definindo novas cores
+\definecolor{midgray}{gray}{.6}
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
 \pdfstringdefDisableCommands{%
-  \def\\{}%
-  \def\texttt#1{<#1>}%
-  \def\lowercase#1{<#1>}%
-  \def\textit#1{<#1>}%
-  \def\textbf#1{<#1>}%
-  \def\uppercase#1{<#1>}%  
+%   \def\\{}%
+%   \def\texttt#1{<#1>}%
+%   \def\lowercase#1{<#1>}%
+%   \def\textit#1{<#1>}%
+%   \def\textbf#1{<#1>}%
+   \def\uppercase#1{<#1>}%  
 }
 
 % Organiza e gera a lista de abreviaturas, simbolos e glossario

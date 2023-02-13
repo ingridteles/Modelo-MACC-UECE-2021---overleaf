@@ -196,11 +196,11 @@
 %
 \SetKwIF{Se}{SenaoSe}{Senao}{se}{ent\~{a}o}{sen\~{a}o se}{sen\~{a}o}{fim se}%
 \SetKwSwitch{Selec}{Caso}{Outro}{selecione}{fa\c{c}a}{caso}{sen\~{a}o}{fim caso}{fim selec}%
-\SetKwFor{Para}{para}{fa\c{c}a}{fim para}%
-\SetKwFor{ParaPar}{para}{fa\c{c}a em paralelo}{fim para}
-\SetKwFor{ParaCada}{para cada}{fa\c{c}a}{fim para cada}%
-\SetKwFor{ParaTodo}{para todo}{fa\c{c}a}{fim para todo}%
-\SetKwFor{Enqto}{enquanto}{fa\c{c}a}{fim enqto}%
+\SetKwFor{Para}{para}{fa\c{c}a}{fim\ para}%
+\SetKwFor{ParaPar}{para}{fa\c{c}a em paralelo}{fim\ para}
+\SetKwFor{ParaCada}{para cada}{fa\c{c}a}{fim\ para\ cada}%
+\SetKwFor{ParaTodo}{para todo}{fa\c{c}a}{fim\ para\ todo}%
+\SetKwFor{Enqto}{enquanto}{fa\c{c}a}{fim\ enqto}%
 
 % Espaco entre as linhas do algoritmo
 \newcommand{\SetSpacedAlgorithm}{
@@ -215,6 +215,8 @@
 
 % Distance between floats inserted inside the page text (using h) and the text proper.
 \setlength{\intextsep}{18pt plus 2pt minus 2pt}
+
+
 
 \newcommand{\Caption}[1]{ %
 	\begin{Spacing}{1.5} %
@@ -709,8 +711,8 @@
 	%Retira o espaço do parágrafo
 	\hspace*{-2cm}
 	%Adiciona o espaço da margem
-	\hspace*{8cm}	
-	\begin{minipage}{7.5cm}
+	\hspace*{7.5cm}	
+	\begin{minipage}{8cm}
 		\begin{SingleSpace}
 			\imprimirpreambulo	
 			\newline
@@ -762,8 +764,8 @@
 	%Retira o espaço do parágrafo
 	\hspace*{-2cm}
 	%Adiciona o espaço da margem
-	\hspace*{8cm}	
-	\begin{minipage}{7.5cm}
+	\hspace*{7.5cm}	
+	\begin{minipage}{8cm}
 		\begin{SingleSpace}
 			\imprimirpreambulo
 		\end{SingleSpace}		
@@ -858,8 +860,8 @@
 	%Retira o espaço do parágrafo
 	\hspace*{-2cm}
 	%Adiciona o espaço da margem
-	\hspace*{8cm}	
-	\begin{minipage}{7.5cm}
+	\hspace*{7.5cm}	
+	\begin{minipage}{8cm}
 		\begin{SingleSpace}
 		  \imprimirpreambulo            
 		\end{SingleSpace}		
@@ -917,8 +919,8 @@
 	%Retira o espaço do parágrafo
 	\hspace*{-2cm}
 	%Adiciona o espaço da margem
-	\hspace*{8cm}	
-	\begin{minipage}{7.5cm}
+	\hspace*{7.5cm}	
+	\begin{minipage}{8cm}
 		\begin{SingleSpace}
                \imprimirpreambulo 
 		\end{SingleSpace}		
@@ -1030,13 +1032,13 @@
 
 \newcommand{\imprimirdedicatoria}[1]{
 	\ifthenelse{\boolean{uecetex2@ehqualificacao}}{}{
-		\vspace*{20cm}
+		\vspace*{19cm}
 		\vfill
 		%Retira o espaço do parágrafo
 		\hspace*{-2cm}
 		%Adiciona o espaço da margem
-		\hspace*{8cm}	
-		\begin{minipage}{7.5cm}
+		\hspace*{7.5cm}	
+		\begin{minipage}{8cm}
 			\input{#1}
 		\end{minipage}
 		\pagebreak
@@ -1081,8 +1083,8 @@
 		%Retira o espaço do parágrafo
 		\hspace*{-2cm}
 		%Adiciona o espaço da margem
-		\hspace*{8cm}	
-		\begin{minipage}{7.5cm}
+		\hspace*{7.5cm}	
+		\begin{minipage}{8cm}
 			\input{#1}
 			\raggedleft{(\imprimirautordaepigrafe) \par}
 		\end{minipage}		
@@ -1172,23 +1174,45 @@
 %}
 
 \lstset{
-	commentstyle=\color{Green}\ttfamily,
-	basicstyle=\ttfamily,
+        backgroundcolor=\color{backgroundColour},
+	commentstyle=\color{mGreen}\ttfamily,
+        basicstyle=\linespread{1}\small\ttfamily,
 	xleftmargin=15pt,
 	stepnumber=1, 
 	numbers=left,
 	keywordstyle=\color{blue},
-	tabsize=2,	
+	tabsize=4,	
 	rulecolor=\color{black},
 	upquote=true,
-	numberstyle=\tiny\color{gray},
+	numberstyle=\tiny\color{mGray},
+        stringstyle=\color{mPurple},
 	stepnumber=1,
 	numbersep=8pt,
+        showspaces=false,
 	showstringspaces=false,
 	breaklines=true,
+        upquote=true,
 	frame=single,
+        breakautoindent=true,
+        showtabs=false, 
+        captionpos=t,
 	belowskip=\onelineskip,
-	belowcaptionskip=\onelineskip
+	belowcaptionskip=\onelineskip,
+        escapeinside = {(*@}{@*)},
+        morecomment=[l]{//}, %use comment-line-style!
+        morecomment=[s]{/*}{*/}, %for multiline comments
+        literate=%
+            {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 
+            {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+            {ã}{{\~a}}1 {ẽ}{{\~e}}1 {ĩ}{{\~i}}1 {õ}{{\~o}}1 {ũ}{{\~u}}1
+            {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+            {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+            {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+            {À}{{\`A}}1 {È}{{\`E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+            {Ã}{{\~A}}1 {Ẽ}{{\~E}}1 {Ũ}{{\~u}}1 {Õ}{{\~O}}1 {Ũ}{{\~U}}1
+            {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+            {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+            {ç}{{\c{c}}}1 {Ç}{{\c{C}}}1
 }
 
 %\newfloat[chapter]{codigofonte}{locf}{\lstlistingname}
