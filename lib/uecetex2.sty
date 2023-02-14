@@ -194,8 +194,8 @@
 \SetKwBlock{Inicio}{in\'{i}cio}{fim}%
 \SetKwRepeat{Repita}{repita}{at\'{e}}%
 %
-\SetKwIF{Se}{SenaoSe}{Senao}{se}{ent\~{a}o}{sen\~{a}o se}{sen\~{a}o}{fim se}%
-\SetKwSwitch{Selec}{Caso}{Outro}{selecione}{fa\c{c}a}{caso}{sen\~{a}o}{fim caso}{fim selec}%
+\SetKwIF{Se}{SenaoSe}{Senao}{se}{ent\~{a}o}{sen\~{a}o se}{sen\~{a}o}{fim\ se}%
+\SetKwSwitch{Selec}{Caso}{Outro}{selecione}{fa\c{c}a}{caso}{sen\~{a}o}{fim\ caso}{fim\ selec}%
 \SetKwFor{Para}{para}{fa\c{c}a}{fim\ para}%
 \SetKwFor{ParaPar}{para}{fa\c{c}a em paralelo}{fim\ para}
 \SetKwFor{ParaCada}{para cada}{fa\c{c}a}{fim\ para\ cada}%
@@ -706,23 +706,23 @@
 		\normalsize\MakeUppercase\imprimirtitulo
 	\end{center}
 	
-	\vspace{2.5cm}
+	\vspace{2cm}
 	
 	%Retira o espaço do parágrafo
 	\hspace*{-2cm}
 	%Adiciona o espaço da margem
-	\hspace*{7.5cm}	
-	\begin{minipage}{8cm}
+	\hspace*{8cm}	
+	\begin{minipage}{7.8cm}
 		\begin{SingleSpace}
-			\imprimirpreambulo	
-			\newline
-			\artigoorientador: \ignorespaces\imprimirorientador 
+			\imprimirpreambulo \vspace{\onelineskip}
+                \newline                
+			\artigoorientador: \ignorespaces\imprimirorientador
 			\abntex@ifnotempty{\imprimircoorientador}{
-				\newline
-				\artigocoorientador: \ignorespaces\imprimircoorientador				
-			}
+				  \newline
+				  \artigocoorientador: \ignorespaces\imprimircoorientador	
+               }
 		\end{SingleSpace}		
-	\end{minipage}
+	\end{minipage} 
  
 	\vfill
 	\centering
@@ -749,7 +749,7 @@
 	\setlength{\ABNTEXsignwidth}{8cm}
 	
 	% Espaço entre uma assintura e outra
-	\setlength{\ABNTEXsignskip}{18pt}
+	%\setlength{\ABNTEXsignskip}{1.5cm}
 
 	\begin{center}
 		\MakeUppercase{\imprimirautor}\par
@@ -764,8 +764,8 @@
 	%Retira o espaço do parágrafo
 	\hspace*{-2cm}
 	%Adiciona o espaço da margem
-	\hspace*{7.5cm}	
-	\begin{minipage}{8cm}
+	\hspace*{8cm}	
+	\begin{minipage}{7.8cm}
 		\begin{SingleSpace}
 			\imprimirpreambulo
 		\end{SingleSpace}		
@@ -780,64 +780,56 @@
 	\begin{center}
 		BANCA EXAMINADORA
 	\end{center}
-	
-	\vspace{\onelineskip}
-
+	\vspace*{-1cm}
 	% Membro Um da banca é sempre o Orientador
 	% Membro Dois da banca pode ser o coorientador ou outro membro
+        
 	\ifnotempty{\imprimircoorientador}{
-		\hspace*{-2.95cm}
-		\assinatura*{\imprimirorientador\  \artigoorientadorcomparenteses \\ \imprimirorientadories}  
-		\hspace*{0.7cm} 
-		\assinatura*{\imprimircoorientador\ \artigocoorientadorcomparenteses \\ \imprimircoorientadories}
-		
-		\hspace*{-3cm}
-		% Membro Três da banca pode ser o coorientador ou outro membro
-		\ifnotempty{\imprimirmembrodabancadois}{
-			\assinatura*{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
-		}{}
-		\hspace*{0.5cm} 		
-		% Membro Três da banca pode ser o coorientador ou outro membro
-		\ifnotempty{\imprimirmembrodabancatres}{
-			\assinatura*{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
-		}{}
-		\hspace*{-1.0cm} 
-		% Membro Quatro da banca pode ser o coorientador ou outro membro
-		\ifnotempty{\imprimirmembrodabancaquatro}{
-			\assinatura*{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
-		}{}	
-		\hspace*{0.5cm} 
+            \hspace*{-2.5cm}
+		  \assinatura*{\imprimirorientador\  \artigoorientadorcomparenteses \\ \imprimirorientadories}  
+            %\hspace*{0.7cm} 
+            \assinatura*{\imprimircoorientador\ \artigocoorientadorcomparenteses \\ \imprimircoorientadories} 
+            
+            \hspace*{-2.5cm}
+            % Membro Dois da banca pode ser o coorientador ou outro membro
+            \ifnotempty{\imprimirmembrodabancadois}{
+              \assinatura*{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
+            }{}
+            % Membro Três da banca pode ser o coorientador ou outro membro
+            \ifnotempty{\imprimirmembrodabancatres}{
+              \assinatura*{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
+            }{}
+            \hspace*{-0.5cm} 
+            % Membro Quatro da banca pode ser o coorientador ou outro membro
+            \ifnotempty{\imprimirmembrodabancaquatro}{
+              \assinatura*{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
+            }{}	
             % Membro Cinco da banca pode ser o coorientador ou outro membro
-		\ifnotempty{\imprimirmembrodabancacinco}{
-			\assinatura*{\imprimirmembrodabancacinco \\ \imprimirmembrodabancacincoies}
-		}{}
+            \ifnotempty{\imprimirmembrodabancacinco}{
+              \assinatura*{\imprimirmembrodabancacinco \\ \imprimirmembrodabancacincoies}
+            }{}
 	}{
-		% Espaço entre uma assintura e outra
-		\setlength{\ABNTEXsignskip}{2pt}
-		\hspace*{-2.95cm}
+        \hspace*{-2.5cm}
 		\assinatura*{\imprimirorientador\  \artigoorientadorcomparenteses \\ \imprimirorientadories}		
-		\hspace*{0.5cm} 
 		% Membro Dois da banca pode ser o coorientador ou outro membro
 		\ifnotempty{\imprimirmembrodabancadois}{
 			\assinatura*{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
-		}{}
-		
-		\hspace*{-3cm}		
+		}{} 
+        \hspace*{-0.5cm}
 		% Membro Três da banca pode ser o coorientador ou outro membro
 		\ifnotempty{\imprimirmembrodabancatres}{
 			\assinatura*{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
 		}{}		
-		\hspace*{0.5cm} 
 		% Membro Quatro da banca pode ser o coorientador ou outro membro
 		\ifnotempty{\imprimirmembrodabancaquatro}{
 			\assinatura*{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
 		}{}
-		\hspace*{-1.0cm}
+		\hspace*{-0.5cm}
+        % Membro Cinco da banca pode ser o coorientador ou outro membro
 		\ifnotempty{\imprimirmembrodabancacinco}{
 			\assinatura*{\imprimirmembrodabancacinco \\ \imprimirmembrodabancacincoies}
 		}{}
-		\hspace*{0.5cm} 
-		% Membro Quatro da banca pode ser o coorientador ou outro membro
+		% Membro Seis da banca pode ser o coorientador ou outro membro
 		\ifnotempty{\imprimirmembrodabancaseis}{
 			\assinatura*{\imprimirmembrodabancaseis \\  \imprimirmembrodabancaseisies}
 		}{}
@@ -860,8 +852,8 @@
 	%Retira o espaço do parágrafo
 	\hspace*{-2cm}
 	%Adiciona o espaço da margem
-	\hspace*{7.5cm}	
-	\begin{minipage}{8cm}
+	\hspace*{8cm}	
+	\begin{minipage}{7.8cm}
 		\begin{SingleSpace}
 		  \imprimirpreambulo            
 		\end{SingleSpace}		
@@ -876,29 +868,28 @@
 	\begin{center}
 		BANCA EXAMINADORA
 	\end{center}
-		\vspace{\onelineskip}
-
+        \vspace*{-1.0cm}
 	% Membro Um da banca é sempre o Orientador
 	\assinatura{\imprimirorientador \artigoorientadorcomparenteses \\ \imprimirorientadories}
 	
 	% Membro Dois da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimircoorientador}{
-		\assinatura{\imprimircoorientador \artigocoorientadorcomparenteses \\ \imprimircoorientadories}
+          \assinatura{\imprimircoorientador \artigocoorientadorcomparenteses \\ \imprimircoorientadories}
 	}
 	
 	% Membro Três da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimirmembrodabancadois}{
-		\assinatura{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
+		  \assinatura{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
 	}
 		
 	% Membro Três da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimirmembrodabancatres}{
-		\assinatura{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
+		  \assinatura{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
 	}
 	
 	% Membro Quatro da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimirmembrodabancaquatro}{
-		\assinatura{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
+		  \assinatura{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
 	}	
 	
 	\pagebreak
@@ -919,8 +910,8 @@
 	%Retira o espaço do parágrafo
 	\hspace*{-2cm}
 	%Adiciona o espaço da margem
-	\hspace*{7.5cm}	
-	\begin{minipage}{8cm}
+	\hspace*{8cm}	
+	\begin{minipage}{7.8cm}
 		\begin{SingleSpace}
                \imprimirpreambulo 
 		\end{SingleSpace}		
@@ -935,29 +926,29 @@
 	\begin{center}
 		BANCA EXAMINADORA
 	\end{center}
-		\vspace{\onelineskip}
+		\vspace*{-1.0cm}
 
 	% Membro Um da banca é sempre o Orientador
 	\assinatura{\imprimirorientador \artigoorientadorcomparenteses \\ \imprimirorientadorcentro \\  \imprimirorientadories}
 	
 	% Membro Dois da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimircoorientador}{
-		\assinatura{\imprimircoorientador \artigocoorientadorcomparenteses \\ \imprimircoorientadorcentro\\ \imprimircoorientadories}
+		  \assinatura{\imprimircoorientador \artigocoorientadorcomparenteses \\ \imprimircoorientadorcentro\\ \imprimircoorientadories}
 	}
 	
 	% Membro Três da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimirmembrodabancadois}{
-		\assinatura{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoiscentro \\ \imprimirmembrodabancadoisies}
+		  \assinatura{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoiscentro \\ \imprimirmembrodabancadoisies}
 	}
 		
 	% Membro Três da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimirmembrodabancatres}{
-		\assinatura{\imprimirmembrodabancatres \\ \imprimirmembrodabancatrescentro \\ \imprimirmembrodabancatresies}
+		  \assinatura{\imprimirmembrodabancatres \\ \imprimirmembrodabancatrescentro \\ \imprimirmembrodabancatresies}
 	}
 	
 	% Membro Quatro da banca pode ser o coorientador ou outro membro
 	\ifnotempty{\imprimirmembrodabancaquatro}{
-		\assinatura{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatrocentro \\ \imprimirmembrodabancaquatroies}
+		  \assinatura{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatrocentro \\ \imprimirmembrodabancaquatroies}
 	}	
 	
 	\pagebreak
@@ -966,7 +957,7 @@
 \newcommand{\imprimirfolhadeaprovacao}{
 	\ifthenelse{\boolean{uecetex2@ehdissertacao}}{ %
     	\imprimirfolhadeaprovacaodissertacao %	
-    }{
+        }{
     	\ifthenelse{\boolean{uecetex2@ehtese}}{ %
     		\imprimirfolhadeaprovacaotese	 %
     	}{
@@ -1037,8 +1028,8 @@
 		%Retira o espaço do parágrafo
 		\hspace*{-2cm}
 		%Adiciona o espaço da margem
-		\hspace*{7.5cm}	
-		\begin{minipage}{8cm}
+		\hspace*{8cm}	
+		\begin{minipage}{7.8cm}
 			\input{#1}
 		\end{minipage}
 		\pagebreak
@@ -1083,8 +1074,8 @@
 		%Retira o espaço do parágrafo
 		\hspace*{-2cm}
 		%Adiciona o espaço da margem
-		\hspace*{7.5cm}	
-		\begin{minipage}{8cm}
+		\hspace*{8cm}	
+		\begin{minipage}{7.8cm}
 			\input{#1}
 			\raggedleft{(\imprimirautordaepigrafe) \par}
 		\end{minipage}		
@@ -1493,7 +1484,7 @@
 }
 
 \newcommand{\imprimiranexos}{ %
-	\imprimirpaginaanexo
+	%\imprimirpaginaanexo
 	\anexos %
 	% Retira o negrito da palavra "Apendice"
 	\PRIVATEapendiceconfig{\normalfont\anexoname}{\normalfont\anexosname} %
