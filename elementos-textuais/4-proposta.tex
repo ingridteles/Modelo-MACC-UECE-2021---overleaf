@@ -24,60 +24,82 @@ public enum ETipoComando
 }
 \end{lstlisting}
 
-% \lipsum[2] Conforme Algoritmo \ref{alg:algoritmo}. 
-
-% \begin{algorithm}[!ht]
-%   \Caption{Exemplo de Algoritmo \label{alg:algoritmo}}
-%   \SetSpacedAlgorithm
-%   \ForAll{algoritmo  $Al$}{
-%     Criar primeira ação do algoritmo $Al$\;
-%     Criar segunda ação\;
-%     \textbf{call} $executarComando$($Alg$)\;
-%     Fazer ação 1\;
-%     Fazer ação 2\;
-%     Fazer ação 3\;
-%     \If{possuiCondicao($Alg$)} {
-%       Fazer ação 4\;
-%     }
-%   }  
-%   \DontPrintSemicolon
-%   \SetKwFunction{FMain}{$executarComando$}
-%   \SetKwProg{Fn}{Function}{:}{}
-%   \Fn{\FMain{$Alg$}}{
-%     \ForAll{comando $Cp$ de $Alg$ }{
-%       Executar comando $Cp$\;  
-%     }
-%   }
-
-% \end{algorithm}
-
-\lipsum[2] Conforme Algoritmo \ref{alg:exemplo-de-algoritmo}. 
-
+\lipsum[2] Conforme Algoritmo \ref{alg:algoritmo}. 
 
 \begin{algorithm}[!ht]
-  \SetAlgoLined
-  \Caption{\label{alg:exemplo-de-algoritmo}Como escrever algoritmos no \LaTeX2e}
+  \Caption{Exemplo de Algoritmo \label{alg:algoritmo}}
   \SetSpacedAlgorithm
-  \Entrada{o proprio texto}
-  \Saida{como escrever algoritmos com \LaTeX2e }
-  \Inicio{
-    inicializa\c{c}\~ao\;
-    \Repita{fim do texto}{
-      leia o atual\;
-      \Se{entendeu}{
-        vá para o próximo\;
-        próximo se torna o atual\;
-        \textbf{chamar} $funcaoCom$($Parametro$)\;
-      }
-      \Senao{volte ao início da seção\;}
-      }
+  \ForAll{algoritmo  $Al$}{
+    Criar primeira ação do algoritmo $Al$\;
+    Criar segunda ação\;
+    \textbf{call} $executarComando$($Alg$)\;
+    Fazer ação 1\;
+    Fazer ação 2\;
+    Fazer ação 3\;
+    \If{possuiCondicao($Alg$)} {
+      Fazer ação 4\;
+    }
+  }  
+  \DontPrintSemicolon
+  \SetKwFunction{FMain}{$executarComando$}
+  \SetKwProg{Fn}{Function}{:}{}
+  \Fn{\FMain{$Alg$}}{
+    \ForAll{comando $Cp$ de $Alg$ }{
+      Executar comando $Cp$\;  
+    }
   }
 
-  \DontPrintSemicolon
-  \SetKwFunction{FuncaoAuxiliar}{$funcaoCom$}
-  \Funcao{\FuncaoAuxiliar{$Parametro$}}{
-      \ParaTodo{elemento $p$ do $Parametro$}{
-        imprimir $p$\;  
-      }
-    }
 \end{algorithm}
+
+% Algoritmo em ingles
+The \verb|algorithm| environment is a \emph{float}, like \verb|table| and \verb|figure|, so you can add float placement modifiers \verb|[hbt!]| after \verb|\begin{algorithm}| if necessary.
+
+\begin{algorithm}
+\Caption{Another algorithm with caption}\label{alg:three}
+\SetSpacedAlgorithm
+\KwData{Write here the required data}
+\KwResult{Write here the expected result}
+ initialization\;
+ \While{While condition}{
+  instructions\;
+  \eIf{condition}{
+   instructions1\;
+   instructions2\;
+   }{
+   instructions3\;
+  }
+ }
+\end{algorithm}
+
+
+% Algoritmo em portuges
+% \lipsum[2] Conforme Algoritmo \ref{alg:exemplo-de-algoritmo}. 
+
+
+% \begin{algorithm}[!ht]
+%   \SetAlgoLined
+%   \Caption{\label{alg:exemplo-de-algoritmo}Como escrever algoritmos no \LaTeX2e}
+%   \SetSpacedAlgorithm
+%   \Entrada{o proprio texto}
+%   \Saida{como escrever algoritmos com \LaTeX2e }
+%   \Inicio{
+%     inicializa\c{c}\~ao\;
+%     \Repita{fim do texto}{
+%       leia o atual\;
+%       \Se{entendeu}{
+%         vá para o próximo\;
+%         próximo se torna o atual\;
+%         \textbf{chamar} $funcaoCom$($Parametro$)\;
+%       }
+%       \Senao{volte ao início da seção\;}
+%       }
+%   }
+
+%   \DontPrintSemicolon
+%   \SetKwFunction{FuncaoAuxiliar}{$funcaoCom$}
+%   \Funcao{\FuncaoAuxiliar{$Parametro$}}{
+%       \ParaTodo{elemento $p$ do $Parametro$}{
+%         imprimir $p$\;  
+%       }
+%     }
+% \end{algorithm}
